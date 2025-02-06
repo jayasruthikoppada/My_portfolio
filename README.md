@@ -19,4 +19,4 @@ It includes:
 
 
 # 🚀 Live Demo
-You can view the live site here: [https://jayasruthikoppada.netlify.app/](#) 
+You can view the live site here: [https://jayasruthikoppada.netlify.app/]

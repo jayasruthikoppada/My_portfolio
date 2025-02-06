@@ -1,0 +1,267 @@
+/* Reset Default Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1b2f; /* Modern dark theme */
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #162447;
+    border-bottom: 1px solid #1f4068;
+}
+
+header h1 {
+    font-size: 2.9em;
+    color: #ffbe33;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #a3d8f4;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: relative;
+    width: 100%;
+    background-color: #162447;
+    font-size: 0.7em;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 60px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ffbe33; /* Highlight color on hover */
+    color: #1b1b2f;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content {
+    padding-top: 80px; /* Ensures content starts below navbar */
+}
+
+/* General Section Styling */
+.section {
+    margin-bottom: 50px;
+    background: #1f4068;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section h2 {
+    text-align: center;
+    color: #ffbe33;
+    margin-bottom: 20px;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-me img {
+    width: 500px;
+    height: 500px;
+    border-radius: 0.5%;
+    border: 1px solid white;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Education Section */
+.Education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.type {
+    background: #1f4068;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #1f4068;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.type:hover {
+    background: #ffbe33;
+    color: #1b1b2f;
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.skill {
+    background: #1f4068;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    border: 2px solid #1f4068;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill i {
+    margin-right: 8px;
+    font-size: 1.5em;
+    color: #ffbe33; /* Highlighted icon color */
+}
+
+.skill:hover {
+    background: #ffbe33;
+    color: #1b1b2f;
+    transform: scale(1.1);
+}
+
+.skill:hover i {
+    color: #1b1b2f;
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Slideshow Controls */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Slideshow Navigation Dots */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Contact Section */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* White Links Styling */
+.white-link {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+.white-link:hover {
+    color: #ccc !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1f4068;
+    color: #ffffff;
+}
+
+/* Animation Keyframes */
+@keyframes swing {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}

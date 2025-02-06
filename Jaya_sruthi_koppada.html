@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>Jaya Sruthi Koppada - Portfolio</title>
     <style>
         * {
@@ -12,7 +14,7 @@
         }
 
         body {
-            font-family: 'Times New Roman', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #1b1b2f; /* Modern dark theme */
             color: #e0e0e0;
             line-height: 1.7;
@@ -34,12 +36,49 @@
             font-size: 1.2em;
             color: #a3d8f4;
         }
+        
+.navbar {
+    position: relative;
+    top: 10;
+    left: 0;
+    width: 100%; /* Ensures it covers full width */
+    background-color: #162447;
+    font-size: 0.7em;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    z-index: 9999; /* Ensures it stays above content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 60px; /* Explicit height */
+}
 
-        .content {
-            padding: 25px;
+.content {
+    padding-top: 60px; /* Ensures content starts below navbar */
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ffbe33; /* Highlight color on hover */
+    color: #1b1b2f;
+    border-radius: 5px;
+}
+
+
+.content {
+            padding-top: 80px;;
         }
 
-        .section {
+.section {
             margin-bottom: 50px;
             background: #1f4068;
             padding: 20px;
@@ -47,42 +86,86 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
-        .section h2 {
+.section h2 {
             text-align: center;
             color: #ffbe33;
             margin-bottom: 20px;
         }
 
-        .about-me {
+.about-me {
             display: flex;
-            align-items: center;
+            align-items: flex;
             justify-content: space-between;
+            gap: 60px;
         }
 
-        .about-me img {
-    width: 300px;
-    height: 300px;
+.about-me img {
+    width: 500px;
+    height: 500px;
     border-radius: 0.5%;
     border: 1px solid white;
     object-fit: cover;
-    margin-top: -50px; /* Adjust the value as needed */
+    margin-top: 20px; /* Adjust the value as needed */
 }
-
-
-        .skills {
+.Education{
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
         }
-
-        .skill {
-            background: #162447;
-            padding: 20px;
+.type{
+            background: #1f4068;
+            padding: 10px;
             border-radius: 5px;
-            text-align: center;
+            text-align: flex;
             border: 2px solid #1f4068;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+.type:hover {
+    background: #ffbe33;
+    color: #1b1b2f;
+    transform: scale(1.1);
+}
+
+.type:hover i {
+    color: #1b1b2f;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex;
+}
+
+.skill {
+    background: #1f4068;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.0em;
+    display: center;
+    align-items: flex;
+    border: 2px solid #1f4068;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill i {
+    margin-right: 8px;
+    font-size: 1.5em;
+    color: #ffbe33; /* Highlighted icon color */
+}
+
+.skill:hover {
+    background: #ffbe33;
+    color: #1b1b2f;
+    transform: scale(1.1);
+}
+
+.skill:hover i {
+    color: #1b1b2f;
+}
+
 
         .slideshow-container {
             position: relative;
@@ -154,18 +237,17 @@
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
+            color: #ffffff;
         }
+        .white-link {
+    color: white !important; /* Force white color */
+    text-decoration: underline !important; /* Remove underline */
+}
 
-        .contact-icons a {
-            color: #a3d8f4;
-            text-decoration: none;
-            font-size: 2em;
-        }
+.white-link:hover {
+    color: #ccc !important; /* Light gray on hover */
+}
 
-        .contact-icons a:hover {
-            color: #e43f5a;
-        }
-        
 			
         footer {
             text-align: center;
@@ -196,6 +278,13 @@
 	
 </head>
 <body>
+<nav class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Technical Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <header>
     <h1>Jaya Sruthi Koppada</h1>
@@ -203,92 +292,80 @@
 </header>
 
 <div class="content">
-    <div class="section about-me">
+    <div class="section about-me" id="about">
         <div>
             <h2>About Me</h2>
-            <p>Hi, I'm Jaya Sruthi Koppada, You can call me Jaya, /ˈjīə/. I recently finished my Masters in Bioinformatics from Indiana University(December 2024), boasting a strong GPA of 3.7/4.0. I am a Bioinformatician with expertise in next-generation sequencing, data analysis, and bioinformatics workflows. I have two years experience as a Research Associate focused in developing pipeline in applying NGS to Early Onset Alzheimer's disease patients dataset. </p>
-      <p> In addition, my role as a Teaching Assistant enabled me to refine my ability to communicate complex concepts effectively, particularly in Clinical Decision Support Systems and Electronic Health Records. With a dual background in bioinformatics and chemistry, I bring a multidisciplinary approach to solving biological challenges. I have contributed to several academic projects, including genome assembly, pathway enrichment analysis, and applying machine learning to biological datasets. My technical expertise spans Python, R, MySQL, and workflow automation tools like Snakemake, which I leverage to streamline data analysis pipelines. Proficient in data visualization, I excel at presenting insights using Matplotlib, ggplot2, and Tableau, ensuring that complex data becomes actionable and understandable. My focus lies in leveraging data-driven approaches to advance personalized medicine and uncover new insights into disease mechanisms. I am committed to continuous learning and thrive in collaborative environments that challenge me to grow professionally and intellectually.</p>
+            <p>Hey there! I'm Jaya Sruthi Koppada, you can call me Jaya (/ˈjīə/). I’m a Bioinformatician and Computational Biologist with a passion for making sense of complex biological data through coding, machine learning, and bioinformatics workflows. I recently completed my Master’s in Bioinformatics at Indiana University (December 2024) with a 3.7 GPA, and I love finding patterns in data that can drive breakthroughs in genomics and medicine. </p>
+</p> During my time as a Research Assistant at Indiana University School of Medicine, I worked on next-generation sequencing (NGS) projects, built bioinformatics pipelines, and developed machine learning models in analyzing genomic datasets (turns out, genes can be quite predictable!). I also optimized RNA-Seq, single-cell RNA sequencing, WGS, and WES workflows, improving data processing efficiency because science moves fast, and so should our data! </p>
+<p> Before diving into computational biology, I was at Aragen Life Sciences as a Research Associate, where I worked on drug discovery and biomarker identification. I conducted high-throughput screening (HTS) and large-scale compound screening, analyzing dose-response curves and Z’-factor scores (aka, the behind-the-scenes magic of drug development). I also applied machine learning to analyze multi-dimensional assay datasets.
+I also enjoyed teaching and mentoring, which I got to do as a Teaching Assistant, helping students navigate Clinical Decision Support Systems (CDSS) and Electronic Health Records (EHRs)—basically, making health data a little less intimidating.
+Tech-wise, I’m fluent in Python, R, SQL, and Snakemake, love creating data visualizations in Tableau and Power BI, and have experience with machine learning frameworks like TensorFlow and scikit-learn. My passion? Using data-driven approaches to make personalized medicine smarter and disease research faster.</p>
+<p> Outside of bioinformatics, I’m always up for a good fictional, sci-fi or mythological books, binge watching documentories, or exploring new ways to make biological data storytelling more engaging. If you're looking for someone who can code, analyze, and communicate science without making it boring, we should definitely connect! 🚀 </p>
         </div>
         <img src="https://i.postimg.cc/Y24nCs4p/IMG-9182.jpg" alt="Jaya Sruthi Koppada">
     </div>
-
-      <div class="section">
-        <h2>Technical Skills</h2>
-        <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <div class="skills">
-                <div class="skill">
-                 
-                    Python
+<div class="section" id="education">
+<h2>Education</h2>
+    <div class="Education">
+        <div class="education-category">
+            <h3>Master's</h3>
+            <div class="education">
+                <div class="type">Bioinformatics (3.7/4.0)
                 </div>
-                <div class="skill">
-                    R
-                </div>
-                <div class="skill">
-                    MySQL
-                </div>
-            </div>
-        </div>
-<h3>Data Visualizations</h3>
-            <div class="skills">
-                <div class="skill">
-                 
-                    Power BI
-                </div>
-                <div class="skill">
-                    Tableau
-                </div>
-        </div>
-			  <div class="skill-category">
-            <h3>Web Technologies</h3>
-            <div class="skills">
-                <div class="skill">
-                   
-                    HTML
-                </div>
-                <div class="skill">
-                  
-                    CSS
+                <div class="type">Applied Chemistry (8.6/10)
                 </div>
             </div>
         </div>
 
-        <div class="skill-category">
-            <h3>Databases</h3>
-            <div class="skills">
-                <div class="skill">
-                    BLAST
-                </div>
-                <div class="skill">
-                 
-                    GenBank
-                </div>
-                <div class="skill">
-
-                    Cytoscape
-                </div>
-                <div class="skill">
-                  
-                    GWAS Catalog
-                </div>
-            </div>
-        </div>
-
-        <div class="skill-category">
-            <h3>Other Skills</h3>
-            <div class="skills">
-                <div class="skill">
-                    Unix/Linux
-                </div>
-                <div class="skill">
-                   
-                    Machine Learning
+        <div class="education-category">
+            <h3>Bachelor's</h3>
+            <div class="education">
+                <div class="type">Biotechnology/Microbiology/Chemistry(9.3/10)
                 </div>
             </div>
         </div>
     </div>
+</div>
+ <div class="section" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-icons">
+        <!-- Programming & Scripting -->
+        <div class="skill">Python, Bash Scripting, R</div>
 
-    <div class="section">
+        <!-- Data Science & Machine Learning -->
+        <div class="skill">Machine Learning, Biomedical Analytics, scikit-learn,  TensorFlow, PyTorch</div>
+
+        <!-- Pipeline Development & Workflow Automation -->
+        <div class="skill">Nextflow, Snakemake, WDL, Slurm</div>
+        <!-- Data Science & Machine Learning -->
+        <div class="skill">Keras, Pandas, NumPy, Seaborn, MATLAB</div>
+    
+
+        <!-- Bioinformatics & Genomics -->
+        <div class="skill">RNA-Seq, Single-Cell RNA-Seq, Next Generation Sequencing, GWAS</div>
+        <!-- Databases & Version Control -->
+        <div class="skill">MySQL, PostgreSQL, Git/GitHub, DHIS2</div>
+        <!-- Bioinformatics & Genomics -->
+        <div class="skill">Genomics, Epigenomics, Spatial Transcriptomics, WGS/WES, Systems Biology </div>
+
+      
+
+
+        <!-- Computational Environments & Cloud -->
+        <div class="skill">Unix/Linux, High-Performance Computing (HPC)</div>
+        <div class="skill">Google Cloud Platform (GCP), AWS</div>
+
+        <!-- Data Visualization & Analytics -->
+        <div class="skill">Tableau, Power BI, Microsoft Office</div>
+
+        <div class="skill">high-throughput screening (HTS), Cell-based assays, Standard Operating Procedures (SOPs)</div>
+
+
+    </div>
+</div>
+
+
+    <div class="section" id="certificates">
         <h2>Certificates & Licenses</h2>
         <div class="slideshow-container">
             <div class="slide">
@@ -316,7 +393,8 @@
     </div>
     </div>
 </div>
-    <div class="section">
+    
+    <div class="section" id="contact">
     <h2>Let's connect :)</h2>
     <p>Email: sruthikoppada@gmail.com</p>
     <p>Phone: +1 (317) 912-8735</p>
@@ -325,7 +403,7 @@
 </div>
 </div>
 <footer>
-    <p>&copy; 2024 Jaya Sruthi Koppada. All Rights Reserved.</p>
+    <p>&copy; 2025 Jaya Sruthi Koppada. All Rights Reserved.</p>
 </footer>
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -358,9 +436,16 @@
     }
 
 </script>
+<script>
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
 
 </body>
 </html>
-
-
-
